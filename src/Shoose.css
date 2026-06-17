@@ -1,0 +1,141 @@
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 200px;
+}
+.top img {
+  border-radius: 50%;
+  object-fit: contain;
+}
+#img1 {
+  height: 90px;
+  width: 90px;
+}
+#img2 {
+  height: 80px;
+  width: 80px;
+}
+.transi1,
+.transi2,
+.transi3 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.transi1 img,
+.transi2 img,
+.transi3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.4s ease;
+}
+
+/* la 1ère image (par défaut visible) */
+.transi1 img:first-child,
+.transi2 img:first-child,
+.transi3 img:first-child {
+    opacity: 1;
+}
+
+
+.transi1 img:last-child,
+.transi2 img:last-child,
+.transi3 img:last-child {
+    opacity: 0;
+}
+
+
+.transi1:hover img:first-child,
+.transi2:hover img:first-child,
+.transi3:hover img:first-child {
+    opacity: 0;
+}
+
+.transi1:hover img:last-child,
+.transi2:hover img:last-child,
+.transi3:hover img:last-child {
+    opacity: 1;
+}
+
+.images-prt1, .images-prt2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.transi1, .transi2, .transi3,
+.transi4, .transi5, .transi6 {
+    position: relative;
+    width: 220px;
+    height: 220px;
+}
+
+.transi1 img, .transi2 img, .transi3 img,
+.transi4 img, .transi5 img, .transi6 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+}
+
+#t1-img1, #t2-img1, #t3-img1,
+#t4-img1, #t5-img1, #t6-img1 {
+    height: 220px;
+    width: 220px;
+    opacity: 1;
+}
+
+#t1-img2, #t2-img2, #t3-img2,
+#t4-img2, #t5-img2, #t6-img2 {
+    height: 220px;
+    width: 220px;
+    opacity: 0;
+}
+
+.transi1:hover #t1-img1, .transi2:hover #t2-img1, .transi3:hover #t3-img1,
+.transi4:hover #t4-img1, .transi5:hover #t5-img1, .transi6:hover #t6-img1 {
+    opacity: 0;
+}
+
+.transi1:hover #t1-img2, .transi2:hover #t2-img2, .transi3:hover #t3-img2,
+.transi4:hover #t4-img2, .transi5:hover #t5-img2, .transi6:hover #t6-img2 {
+    opacity: 1;
+}
+
+.transi1, .transi2, .transi3,
+.transi4, .transi5, .transi6 {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    padding-bottom: 60px; /* ← espace réservé pour le prix + bouton */
+}
+
+.prix {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 10; /* ← passe au dessus des images */
+}
+
+button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
