@@ -132,6 +132,8 @@
     z-index: 10; /* ← passe au dessus des images */
 }
 
+/* AJOUT DE DU BUTTON  */
+
 button {
     position: absolute;
     bottom: 0;
@@ -139,3 +141,25 @@ button {
     transform: translateX(-50%);
     z-index: 10;
 }
+
+.all-btn {
+  margin-left: 20px;
+  padding: 12px 28px;
+  border: 2px solid #111;
+  border-radius: 50px;
+  background: #fff;
+  color: #111;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.all-btn:hover {
+  background: #111;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
